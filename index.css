@@ -239,3 +239,18 @@ body {
 
     }
 }
+
+@media only screen and (max-device-width: 320px) {
+    body {
+        orientation: portrait;
+        font-size: 40px;
+    }
+    .home {
+        justify-content: center;
+        position: central;
+    }
+    .home-image {
+        display: none;
+        visibility: hidden;
+    }
+}
