@@ -104,7 +104,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 100px 10% 0;
 }
 
 .home-content {
@@ -314,7 +314,5 @@ body {
     .home-image {
         display: none;
     }
-    .home {
-        padding: 100px 10% 0;
-    }
+
 }
