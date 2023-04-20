@@ -104,7 +104,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 130px 10% 0;
+    padding: 70px 10% 0;
 }
 
 .home-content {
@@ -301,7 +301,9 @@ body {
     .navbar {
         display: none;
     }
-
+    .home {
+        padding: 170px 10% 0;
+    }
     .sidenav {
         left: 1rem;
         width: unset;
