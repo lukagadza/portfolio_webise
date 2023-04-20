@@ -61,7 +61,8 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: transparent;
+    background: transparent;
+    backdrop-filter: blur(15px);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -305,7 +306,6 @@ body {
         padding: 170px 10% 0;
     }
     .sidenav {
-        left: 1rem;
         width: unset;
     }
 
