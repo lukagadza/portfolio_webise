@@ -314,5 +314,7 @@ body {
     .home-image {
         display: none;
     }
-
+    .home {
+        padding: 100px 10% 0;
+    }
 }
