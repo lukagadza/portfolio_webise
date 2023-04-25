@@ -8,14 +8,15 @@ var typed = new Typed(".multiple-text", {
 
 
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-window.addEventListener("load", function() {
-  closeNav();
-}); 
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.toggle-btn')
+  const toggleBtnIcon = document.querySelector('.toggle-btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+  toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+  }
+  const isOpen = dropDownMenu.classList.contains('open')
+  toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+});

@@ -63,47 +63,65 @@ body {
     color: red;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background: transparent;
-    backdrop-filter: blur(15px);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+.toggle-btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.dropdown_menu ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-weight: bold;
+    list-style-type: none;
 }
 
-.sidenav a:hover {
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0px;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropdown_menu ul li {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.dropdown_menu a:hover,
+.dropdown_menu a.active {
     color: red;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.dropdown_menu .toggle-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
+.dropdown_menu.open {
+    height: 280px;
+}
 
-    .sidenav a {
-        font-size: 18px;
+@media only screen and (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .toggle-btn {
+        display: block;
     }
 }
 
@@ -344,15 +362,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 576px) {
-    .openbtn {
-        display: none;
-    }
 
-    .closebtn {
-        display: none;
-    }
-}
 
 @media only screen and (max-width: 576px) {
     .navbar {
@@ -363,9 +373,7 @@ body {
         padding: 170px 10% 0;
     }
 
-    .sidenav {
-        width: unset;
-    }
+
 
     .home-content p {
         font-size: 20px;
